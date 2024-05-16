@@ -20,6 +20,7 @@ app.use(limiter);
 
 app.get('/', function(req,res){
 //  res.sendFile(path.join(__dirname,'./public/form.html'));
+res.setHeader("Content-Security-Policy", "script-src *");
 res.sendFile(path.join(__dirname,'form.html'));
 });
 
